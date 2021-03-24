@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        {% for object in object_list %}
+            <div class="content">
+                <h2>{{ object.name }}</h2>
+                <p>{{ object.description }}</p>
+                <button onclick="location.href='{% url 'watch' object.pk %}'" type="button">&nbsp;&nbsp;Edit&nbsp;&nbsp;</button>
+                <button onclick="window.open('{{ object.link }}','watch')" type="button">Watch</button>
+                <hr>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Want to keep track of your favourite TV series, anime etc?</p>
+        <p><a href="{% url 'login' %}" class="accounts">Log in</a></p>
+    {% endif %}
+{% endblock content %}

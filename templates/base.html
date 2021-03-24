@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+    <head>
+        <title>Watchlist</title>
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+        <link rel="icon" href="{% static 'icons/favicon.png' %}">
+    </head>
+    <body>
+        {% if user.is_authenticated %}
+        <div class="navbar">
+            <a href="{% url 'home' %}" class="standard">My WatchList</a>
+            <a href="{% url 'watch_new' %} " class="standard">Add New Watch</a>
+            <a href="{% url 'finished' %}" class="standard">Finished</a>
+            <a href="{% url 'logout' %}" class="accounts">Log Out</a>
+        </div>
+        {% endif %}
+        <div class="main">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+        <div class="end">
+            <i><a href="https://github.com/dias-duisembayev/" target="_blank">Dias Duisembayev</a></i>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+/* The navigation bar */
+body {
+  background-image: linear-gradient(#7383bf 12%, rgba(0,212,255,1));
+  font-family: Tisa, Arial;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #7383bf;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  left: 0;
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a.standard {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a.accounts {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: #556080;
+}
+
+/* Main content */
+.main {
+  margin-top: 70px; /* Add a top margin to avoid content overlay */
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f2f2f2;
+}
+
+.main .content:hover hr{
+  border-color: white;
+}
+.main .content hr{
+  margin: 12px 0;
+  border: 0;
+  text-align: center;
+}
+.main .content hr::before{
+    content: "\2022    \2022    \2022";
+    font-size: 25px;
+    color: #f2f2f2;
+}
+
+.end {
+  position: fixed;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.end i{
+  color: #f2f2f2;
+  float: right;
+  padding-right: 5px;
+}
+
+.end a{
+  color: white;
+  text-decoration: none;
+}
+
+.end a:hover{
+  color: #7383bf;
+  text-decoration: none;
+}
+
+input {
+  margin: auto;
+  width: 20%;
+  padding: 8px 14px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: Transparent;
+  border: 1px solid #f2f2f2;
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+button:hover{
+  background-color: white;
+  color: #7383bf;
+  cursor: pointer;
+}
+
+label{
+  display: block;
+  margin: 15px;
+}
+
+textarea{
+  border-radius: 4px;
+}

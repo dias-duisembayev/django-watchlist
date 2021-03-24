@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Edit</h1>
+    <form action="" method="POST"> {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update</button>
+    </form>
+    <form action="{% url 'watch_delete' object.pk %}" method="POST"> {% csrf_token %}
+    <button type="submit">Delete</button>
+    </form>
+{% endblock content %}
